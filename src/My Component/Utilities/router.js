@@ -5,16 +5,19 @@ import ErrorPage from "../ErrorPage"
 import Home from "../Home"
 import Root from "../Root"
 import Statistics from "../Statistics"
+import { getLoaderData } from "./loader"
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
+        loader: getLoaderData ,
         errorElement:<ErrorPage/>,
-        loader:     
+           
         children: [
             {
                 path: '/',
+                
                 element: <Home />
             },
             {

@@ -1,13 +1,16 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { createContext } from 'react';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Nav from './Nav';
-
+export const Mycontext = createContext([])
 const Root = () => {
+    const quizsData=useLoaderData()
+    const quizs = quizsData.data
     return (
-        <div>
+        <Mycontext.Provider value={quizs}>
             <Nav/>
             <Outlet/>
-        </div>
+        </Mycontext.Provider>
+        
     );
 };
 
