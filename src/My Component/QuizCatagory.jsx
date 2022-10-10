@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const QuizCatagory = ({quiz}) => {
-    const {name, logo,total}=quiz
+    const {name,id, logo,total}=quiz
+    
     return (
         <div className=" rounded-md shadow-md bg-slate-200 dark:text-gray-100">
 	<img src={logo} alt="" className=" w-full rounded-t-md h-72 dark:bg-gray-500" />
@@ -10,7 +13,10 @@ const QuizCatagory = ({quiz}) => {
 			<h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
 			<p className="dark:text-gray-100">Total: {total}</p>
 		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-white">Read more</button>
+		
+        <Link to={`/quiz/${id}`}>
+        <button  type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-white">Read more</button>
+        </Link>
 	</div>
 </div>
     );

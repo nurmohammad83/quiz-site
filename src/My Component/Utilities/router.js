@@ -3,6 +3,7 @@ import Blog from "../Blog"
 import Category from "../Category"
 import ErrorPage from "../ErrorPage"
 import Home from "../Home"
+import QuizQuestion from "../QuizQuestion"
 import Root from "../Root"
 import Statistics from "../Statistics"
 import { getLoaderData } from "./loader"
@@ -22,7 +23,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/category',
+               
                 element: <Category />
+            },
+            {
+                path:'/quiz/:quizId',
+                loader:(params)=>{
+                    return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+                },
+                element:<QuizQuestion/>
             },
             {
                 path: '/statistics',
