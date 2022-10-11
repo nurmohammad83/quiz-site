@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
     return (
         <header className="p-4 bg-gray-600 text-gray-100">
-	<div className="container flex justify-between h-16 mx-auto">
-		<h1 className='text-2xl font-medium'><span className='text-orange-500'>Quiz</span> <span>Store</span></h1>
-		<ul className="sm:flex text-white sm:space-x-1 space-x-3 flex">
+	<div className="container relative flex justify-between h-16 mx-auto">
+		<h1 className='text-2xl pt-4 font-medium'><span className='text-orange-500 '>Quiz</span> <span>Store</span></h1>
+		<ul className="items-stretch  md:space-x-3 flex">
 			<li className="flex">
-				<Link rel="noopener noreferrer" to='/' className="flex items-center  sm:text-xs md:text-base px-4  -mb-1 border-b-2 dark:border-transparent">Home</Link>
+				<Link rel="noopener noreferrer" to='/' className="flex items-center  text-xs md:text-base  lg:text-base px-2 md:px-4  -mb-1  dark:border-transparent">Home</Link>
 			</li>
 			<li className="flex">
-				<Link rel="noopener noreferrer" to='/category' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Category</Link>
+				<Link rel="noopener noreferrer" to='/category' className="flex items-center text-xs md:text-base  lg:text-base md:px-4 -mb-1 dark:border-transparent">Category</Link>
 			</li>
 			<li className="flex">
-				<Link rel="noopener noreferrer" to='/statistics' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Statistics</Link>
+				<Link rel="noopener noreferrer" to='/statistics' className="flex items-center text-xs md:text-base  lg:text-base px-4 -mb-1  dark:border-transparent dark:text-violet-400 dark:border-violet-400">Statistics</Link>
 			</li>
 			<li className="flex">
-				<Link rel="noopener noreferrer" to='/blog' className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Blog</Link>
+				<Link rel="noopener noreferrer" to='/blog' className="flex items-center text-xs md:text-base  lg:text-base px-4 -mb-1 dark:border-transparent">Blog</Link>
 			</li>
 		</ul>
 		{/* <button className=" p-4 md:hidden">

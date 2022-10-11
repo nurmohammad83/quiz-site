@@ -22,7 +22,7 @@ const Blog = () => {
         </p>
       </section>
       <section className="m-5 p-8">
-        <h1 className="text-2xl">3. What is the purpose of react router?</h1>
+        <h1 className="text-2xl">3. What is useRef hook in React DOM?</h1>
         <p className="p-3">
         The useRef Hook is a function that returns a mutable ref object whose .current property is initialized with the passed argument (initialValue). The returned object will persist for the full lifetime of the component. There are two main uses of useRef  Accessing the DOM nodes or React elements and keeping a mutable variable. The variable will persist for the full lifetime of the component. Changes in an instance variable won’t generate a re-render. Refs are useful when getting user input, DOM element properties and storing constantly updating values.
         </p>
