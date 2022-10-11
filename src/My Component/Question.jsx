@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 
 import Option from './Option';
-const Question = ({que}) => {
+const Question = ({que,setRightCount,setWrongCount}) => {
     const {options,question,correctAnswer}=que
     const [ans, setAns]= useState(correctAnswer)
     const seeAnswer=()=>{
@@ -28,6 +28,8 @@ const Question = ({que}) => {
                          key={index} 
                          option={option}
                          correctAnswer={correctAnswer}
+                         setRightCount={setRightCount}
+                         setWrongCount={setWrongCount}
                          />)
                     }
                 </div>
