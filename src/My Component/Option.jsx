@@ -11,10 +11,9 @@ const Option = ({option,correctAnswer}) => {
             console.log('wrong');
         }
     }
-    console.log(correctAnswer);
     return (<>
         <div >
-            <button className='w-full border border-blue-600 p-4 text-lg ' onClick={AddAns}><p className=''><input type="radio" className='mr-4'/>{option}</p></button>
+            <button className='w-full border  rounded-2xl border-blue-600 p-4 text-lg ' onClick={AddAns}><p className=''><input type="radio" className='mr-4'/>{option}</p></button>
         </div>
         </>
     );
