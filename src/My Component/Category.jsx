@@ -6,7 +6,7 @@ const Category = () => {
     const quizs = useContext(Mycontext)
     return (
         <>
-        <div className='grid grid-cols-2 gap-5 p-20'>
+        <div className='grid md:grid-cols-2 gap-5 p-20'>
     {
         quizs.map(quiz=> <QuizCatagory
         key={quiz.id}
