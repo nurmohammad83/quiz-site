@@ -16,7 +16,7 @@ const QuizQuestion = () => {
                    
                questions.map(question=> <Question
                key={question.id}
-               question={question}
+               que={question}
                />)
             }
         </div>
